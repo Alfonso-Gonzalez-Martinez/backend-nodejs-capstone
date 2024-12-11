@@ -19,9 +19,7 @@ connectToDatabase().then(() => {
     .catch((e) => console.error('Failed to connect to DB', e));
 
 app.use(express.json());
-app.get("/test", (req, res) => {
-    res.send("Test route works!");
-});
+
 app.use('/api/secondchance/items', secondChanceItemsRoutes);
 // Route files
 

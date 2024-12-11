@@ -131,3 +131,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/secondChance-backend/data_base/WiredTiger
+/secondChance-backend/data_base/WiredTiger.lock
