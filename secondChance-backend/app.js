@@ -11,7 +11,6 @@ const pinoHttp = require('pino-http');
 
 //Database Connection
 const connectToDatabase = require('./models/db');
-const {loadData} = require('./util/import-mongo/index');
 
 // Route files
 const secondChanceRoutes = require('./routes/secondChanceItemsRoutes');
@@ -42,7 +41,7 @@ app.use('/api/secondchance/search', searchRoutes);
 app.use('/api/auth', authRoutes);
 
 // Global Error Handler
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   console.error(err);
   res.status(500).send('Internal Server Error');
 });
